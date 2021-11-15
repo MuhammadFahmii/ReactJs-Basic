@@ -5,8 +5,14 @@ import "./Home.css";
 export default function Home() {
   const [date, setDate] = useState(new Date());
 
+  function refreshClock() {
+    setDate(new Date());
+  }
   useEffect(() => {
-    setInterval(setDate(new Date()), 1000);
+    const timerId = setInterval(refreshClock, 1000);
+    return function cleanup() {
+      clearInterval(timerId);
+    };
   }, []);
   return (
     <>
