@@ -1,0 +1,25 @@
+.side-image {
+  background-image: url("../../assets/charles-rRWiVQzLm7k-unsplash.jpg");
+  background-size: cover;
+  min-height: 1000px;
+  opacity: 0.9;
+}
+
+.contactUs-logo {
+  position: relative;
+  width: 275px;
+  height: 150px;
+  left: 96px;
+  top: 279px;
+}
+
+@media (max-width: 800px) {
+  .side-image {
+    width: 100% !important;
+    min-height: 500px !important;
+  }
+  .contactUs-logo {
+    top: 10%;
+    left: 35%;
+  }
+}

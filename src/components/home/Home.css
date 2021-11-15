@@ -1,0 +1,24 @@
+.jumbotron {
+  background-image: url("../../assets/bg-img.png");
+  background-size: cover;
+  max-width: 100%;
+  height: 600px;
+}
+
+.jumbo-image {
+  height: 500px;
+}
+
+.txt-home h1,
+.txt-home h2,
+.txt-home h3 {
+  color: #19345e;
+}
+
+.nav-item:hover {
+  text-decoration: underline blue;
+}
+
+.logo {
+  height: 50px;
+}

@@ -1,0 +1,9 @@
+.list-todo {
+  display: flex;
+  justify-content: center;
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
