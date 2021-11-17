@@ -7,7 +7,7 @@ export default function CariFilm() {
   const API_KEY = "93433d58";
   const getMovie = async () => {
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${API_KEY}&s=${title}`
+      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${title}`
     );
     const { Search } = await response.json();
     console.log(Search);
