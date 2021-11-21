@@ -1,4 +1,4 @@
-import Task from "../Task";
+import Task from "./Task";
 import { useSelector } from "react-redux";
 
 const Tasks = () => {

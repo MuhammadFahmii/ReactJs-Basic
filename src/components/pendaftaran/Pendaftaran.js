@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Container } from "react-bootstrap";
-import MainNavbar from "../main-navbar/MainNavbar";
 export default function Pendaftaran() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -51,116 +49,111 @@ export default function Pendaftaran() {
     }
   };
   return (
-    <>
-      <MainNavbar />
-      <Container>
-        <form onSubmit={handleSubmit} style={{ margin: "10px" }}>
-          <label>
-            Username: <br />
-            <input
-              type="text"
-              name="username"
-              value={username}
-              onChange={handleChange}
-            />
-          </label>
-          <br />
-          <br />
-          <label>
-            Email: <br />
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-            />
-          </label>
-          <br />
-          <br />
-          <label>
-            No Handphone: <br />
-            <input
-              type="text"
-              name="nohandphone"
-              value={nohandphone}
-              onChange={handleChange}
-            />
-          </label>
-          <br />
-          <br />
-          <label>
-            Latar Belakang Pendidikan:
-            <br />
-            <input
-              id="it"
-              type="radio"
-              name="latar_belakang"
-              value="IT"
-              onChange={handleChange}
-            />
-            <label htmlFor="it">IT</label>
-            <br />
-            <input
-              id="non-it"
-              type="radio"
-              name="latar_belakang"
-              value="NON IT"
-              onChange={handleChange}
-            />
-            <label htmlFor="non-it">NON IT</label>
-          </label>
-          <br />
-          <br />
-          <label>
-            Kelas Koding:
-            <br />
-            <input
-              type="checkbox"
-              name="kelas_koding"
-              value="Coding Backend with Golang"
-              id="backend"
-              onChange={handleChange}
-            />
-            <label htmlFor="backend">Coding Backend With Golang</label>
-            <br />
-            <input
-              type="checkbox"
-              name="kelas_koding"
-              value="Coding Frontend with ReactJS"
-              id="frontend"
-              onChange={handleChange}
-            />
-            <label htmlFor="frontend">Coding Frontend With ReactJS</label>
-            <br />
-            <input
-              type="checkbox"
-              name="kelas_koding"
-              value="Fullstack Developer"
-              id="fullstack"
-              onChange={handleChange}
-            />
-            <label htmlFor="fullstack">Fullstack Developer</label>
-          </label>
-          <br />
-          <br />
-          <label>
-            Foto Surat Kesungguhan: <br />
-            <input type="file" />
-          </label>
-          <br />
-          <br />
-          <label>
-            Harapan untuk coding bootcamp ini <br />
-            <input type="file" />
-          </label>
-          <br />
-          <br />
-          {errorMassage}
-          <br />
-          <input type="submit" value="Submit" />
-          <input type="reset" value="Reset" className="mx-3" />
-        </form>
-      </Container>
-    </>
+    <form onSubmit={handleSubmit} style={{ margin: "10px" }}>
+      <label>
+        Username: <br />
+        <input
+          type="text"
+          name="username"
+          value={username}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <br />
+      <label>
+        Email: <br />
+        <input
+          type="email"
+          name="email"
+          value={email}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <br />
+      <label>
+        No Handphone: <br />
+        <input
+          type="text"
+          name="nohandphone"
+          value={nohandphone}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <br />
+      <label>
+        Latar Belakang Pendidikan:
+        <br />
+        <input
+          id="it"
+          type="radio"
+          name="latar_belakang"
+          value="IT"
+          onChange={handleChange}
+        />
+        <label htmlFor="it">IT</label>
+        <br />
+        <input
+          id="non-it"
+          type="radio"
+          name="latar_belakang"
+          value="NON IT"
+          onChange={handleChange}
+        />
+        <label htmlFor="non-it">NON IT</label>
+      </label>
+      <br />
+      <br />
+      <label>
+        Kelas Koding:
+        <br />
+        <input
+          type="checkbox"
+          name="kelas_koding"
+          value="Coding Backend with Golang"
+          id="backend"
+          onChange={handleChange}
+        />
+        <label htmlFor="backend">Coding Backend With Golang</label>
+        <br />
+        <input
+          type="checkbox"
+          name="kelas_koding"
+          value="Coding Frontend with ReactJS"
+          id="frontend"
+          onChange={handleChange}
+        />
+        <label htmlFor="frontend">Coding Frontend With ReactJS</label>
+        <br />
+        <input
+          type="checkbox"
+          name="kelas_koding"
+          value="Fullstack Developer"
+          id="fullstack"
+          onChange={handleChange}
+        />
+        <label htmlFor="fullstack">Fullstack Developer</label>
+      </label>
+      <br />
+      <br />
+      <label>
+        Foto Surat Kesungguhan: <br />
+        <input type="file" />
+      </label>
+      <br />
+      <br />
+      <label>
+        Harapan untuk coding bootcamp ini <br />
+        <input type="file" />
+      </label>
+      <br />
+      <br />
+      {errorMassage}
+      <br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" className="mx-3" />
+    </form>
   );
 }
